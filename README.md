@@ -1,6 +1,6 @@
-﻿# 附屬於docker-reverseProxy的V2Ray
+# 附屬於docker-reverseProxy的V2Ray
 
-這是從屬於 [jim60105/docker-reverseProxy](https://github.com/jim60105/docker-reverseProxy) 的 V2Ray 方案\
+這是從屬於 [jim60105/docker-ReverseProxy](https://github.com/jim60105/docker-ReverseProxy) 的 V2Ray 方案\
 必須在上述伺服器運行正常後再做
 
 ## 說明
