@@ -13,8 +13,8 @@ services:
     restart: always
     command: sh -c "echo 'proxy pass http://${DOMAIN}/${UUID};' > /vhost/${DOMAIN}_location && sed 's/UUID/${UUID}/g' /config > /config.json && v2ray -config=/config.json"
     environment:
-      - DOMAIN=${DOMAIN}
-      - UUID=${UUID}
+      - DOMAIN
+      - UUID
       - CERT_NAME=${DOMAIN}
       - VIRTUAL_HOST=${DOMAIN}
       - LETSENCRYPT_HOST=${DOMAIN}
