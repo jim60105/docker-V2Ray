@@ -1,9 +1,12 @@
-# 附屬於docker-reverseProxy的V2Ray
+# V2Ray on Docker
 
 這是從屬於 [jim60105/docker-ReverseProxy](https://github.com/jim60105/docker-ReverseProxy) 的 V2Ray 方案\
 必須在上述伺服器運行正常後再做
 
-## 說明
+V2Ray是現在流行的翻牆軟體，可以想為是VPN的進化版。VPN已經可被GFW識別封鎖，SS據說也差不多了，剩下V2Ray比較沒事。\
+不過台灣沒有網路封鎖，其實沒什麼用處..
+
+## 部屬
 ### Server
 1. 以文字編輯器開啟`.env`，填入以下內容
 	* DOMAIN=你的伺服器網域
