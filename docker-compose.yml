@@ -18,6 +18,7 @@ services:
       - UUID
       - VIRTUAL_HOST=${DOMAIN}
       - LETSENCRYPT_HOST=${DOMAIN}
+      - LETSENCRYPT_EMAIL=${EMAIL}
     networks:
       - proxy-tier
 
