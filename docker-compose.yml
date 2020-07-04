@@ -6,12 +6,13 @@ services:
     container_name: v2ray
     volumes:
       - ./config.json:/config:ro
+      - ./location:/location:ro
       - ./log/v2ray:/var/log/v2ray
       - vhost:/vhost
     expose:
       - "8002"
     restart: always
-    command: sh -c "echo 'proxy_pass http://${DOMAIN}/${UUID};' > /vhost/${DOMAIN}_location && sed 's/UUID/${UUID}/g' /config > /config.json && v2ray -config=/config.json"
+    command: sh -c "sed 's/UUID/${UUID}/g' /location | sed 's/DOMAIN/${DOMAIN}/g' > /vhost/${DOMAIN}_location && sed 's/UUID/${UUID}/g' /config > /config.json && v2ray -config=/config.json"
     environment:
       - DOMAIN
       - UUID
