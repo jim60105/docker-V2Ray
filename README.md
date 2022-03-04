@@ -8,16 +8,25 @@ V2Ray是現在流行的翻牆軟體，可以想為是VPN的進化版。VPN已經
 不過台灣沒有GFW，我架這個就是弄好玩的w
 
 ## 部屬
+
 ### Server
+
 1. 請參考`.env_sample`建立`.env`
-	* DOMAIN=你的伺服器網域
-	* UUID=從 [https://www.uuidgenerator.net/](https://www.uuidgenerator.net/ "https://www.uuidgenerator.net/") 取得一組隨機UUID後填入，和後述Client的UUID應相同
-	* EMAIL=你的email
+
+* DOMAIN=你的伺服器網域
+* UUID=從 [https://www.uuidgenerator.net/](https://www.uuidgenerator.net/ "https://www.uuidgenerator.net/") 取得一組隨機UUID後填入，和後述Client的UUID應相同
+* EMAIL=你的email
+
 1. `docker-compose up -d`
+
 ### Client
+
+1. 在此下載客戶端 [v2fly/v2ray-core](https://github.com/v2fly/v2ray-core/releases/latest)\
+   對於Windows用戶，一般來說應下載 `v2ray-windows-64.zip`
 1. 以文字編輯器開啟`forClient/config.json`，替換以下所有字串
-	* `your.domain.com`: 你的伺服器網域
-	* `UUID`: 要和前述Server的UUID相同
+   * `your.domain.com`: 你的伺服器網域
+   * `UUID`: 要和前述Server的UUID相同
 1. 以修改完的config.json替換Client端設定檔
 1. Client端運行v2ray
-1. Client端以SwitchyOmega之類的方式，由SOCKS5://localhost:1080溝通
+1. 瀏覧器以[SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=zh-TW)，由SOCKS5://localhost:1080溝通\
+   ![image](https://user-images.githubusercontent.com/16995691/156827558-7404d795-2ae9-47e8-bcbf-9b0d8e9eda8f.png)
